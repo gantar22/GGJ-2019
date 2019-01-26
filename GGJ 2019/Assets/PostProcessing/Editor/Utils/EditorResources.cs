@@ -18,7 +18,7 @@ namespace UnityEditor.PostProcessing
 
                     if (SearchForEditorResourcesPath(out path))
                         m_EditorResourcesPath = path;
-                    else
+                   else
                         Debug.LogError("Unable to locate editor resources. Make sure the PostProcessing package has been installed correctly.");
                 }
 

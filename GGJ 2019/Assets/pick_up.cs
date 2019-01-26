@@ -63,6 +63,7 @@ public class pick_up : MonoBehaviour {
         StartCoroutine(rotaty_rotaty(o));
         while (Input.GetKey(KeyCode.Mouse1) && Vector3.Distance(o.transform.position,target) > .25f)
         {
+            
             cur = Vector3.SmoothDamp(cur, target, ref vel, smoothing);
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
             yield return null;
