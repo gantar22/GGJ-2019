@@ -69,7 +69,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (stun > 0) return;
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
+            if (!m_Jump && m_JumpSpeed > 0)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
