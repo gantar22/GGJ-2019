@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* This script fades out UI elements on start */
 public class FadeOutColor : MonoBehaviour
 {
     [SerializeField] float beforeFadeOutTime = 3f;
