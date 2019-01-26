@@ -65,6 +65,7 @@ public class pick_up : MonoBehaviour {
     {
         Vector3 start = o.transform.position;
         Vector3 cur = o.transform.position;
+        Quaternion init_rot = transform.rotation;
         //float total_height = target.y - o.transform.position.y;
         vel = Vector3.zero;
         stun_lock.val++;
@@ -88,12 +89,12 @@ public class pick_up : MonoBehaviour {
             blur_volume.weight = Mathf.Lerp(1,0, 1 - Vector3.Distance(o.transform.position, start) / dist);
             cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 2f);
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
-            o.transform.rotation = Quaternion.Lerp(q, Quaternion.identity,1 - Vector3.Distance(o.transform.position, start) / dist);
+            o.transform.rotation = Quaternion.Lerp(q, init_rot,1 - Vector3.Distance(o.transform.position, start) / dist);
             yield return null;
         }
         blur_volume.weight = 0;
         o.transform.position = start;
-        o.transform.rotation = Quaternion.identity;
+        o.transform.rotation = init_rot;
         stun_lock.val--;
         o.layer = LayerMask.NameToLayer("pickupable");
     }
