@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class audio_controller : MonoBehaviour
 {
-    [SerializeField] private audio_event_object audio_event;
-    [SerializeField] private AudioSource oneShotSource;
-
-    void OnAudioEvent(Vector3 position, AudioClip clip)
-    {
-        AudioSource.PlayClipAtPoint(clip, position);
-    }
+    [SerializeField] private string_event_object 
 
     // Start is called before the first frame update
     void Start()
     {
-        audio_event.addListener(OnAudioEvent);
+        
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
