@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Test1
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: This is a test piece of dialog for the upcoming dialog system.
+  - EntryText: This is a test piece of dialog for the [wobble]upcoming[/wobble] dialog
+      system.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 0}
@@ -21,4 +22,4 @@ MonoBehaviour:
       works for sure.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
-    ExecuteOnExit: {fileID: 0}
+    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
