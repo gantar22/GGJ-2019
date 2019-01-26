@@ -44,6 +44,11 @@ public class pick_up : MonoBehaviour {
             if (b)
             {
                 //to_pick_up.val = hit.collider.gameObject;
+                pickupable p = hit.collider.GetComponent<pickupable>();
+                if(p)
+                {
+                    p.OnPickupEvent();
+                }
                 StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit.collider.gameObject));
             }
             b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("interactable"));
