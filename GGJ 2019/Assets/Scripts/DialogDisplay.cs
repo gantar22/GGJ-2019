@@ -46,7 +46,7 @@ public class DialogDisplay : MonoBehaviour
     private readonly int _DisplayingHash = Animator.StringToHash("Displaying");
     private readonly int _ReadyForNextHash = Animator.StringToHash("ReadyForNext");
 
-    private readonly Regex _WobbleRegex = new Regex(@"(\[wobble\]).*(\[\/wobble\])", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _WobbleRegex = new Regex(@"(\[wobble\]).*?(\[\/wobble\])", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
     [ContextMenu("Display (Test)")]
     public void Display()
@@ -92,8 +92,9 @@ public class DialogDisplay : MonoBehaviour
                 int idx2s = match.Groups[2].Index;
                 int idx2e = match.Groups[2].Index + match.Groups[2].Length;
                 string s = "";
-                foreach (Group g in match.Captures)
+                foreach (Group g in match.Groups)
                     s += g.Index + " " + (g.Index + g.Length) + " ; ";
+                Debug.Log(s);
 
                 if(idx1e > idx2s)
                 {
@@ -170,6 +171,8 @@ public class DialogDisplay : MonoBehaviour
             {
                 Vector2Int r = wobbleRanges[cur_range];
                 wobble = inside(r.x, r.y, i);
+                if(i >= r.y)
+                    cur_range++;
             }
 
             int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
