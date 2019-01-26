@@ -4,7 +4,6 @@ using UnityEngine;
 
 
 
-
 /*
 * This script listens for a mouse down
 * then assigns any object in the pickupable
@@ -15,25 +14,81 @@ public class pick_up : MonoBehaviour {
     Camera cam;
 
     [SerializeField]
-    go_var to_pick_up;
+    int_var stun_lock;
+
+    [SerializeField]
+    float rotate_speed;
+
+    [SerializeField]
+    UnityEngine.PostProcessing.PostProcessingProfile ppp_main;
+
+    [SerializeField]
+    UnityEngine.PostProcessing.PostProcessingProfile ppp_pickup;
+
+    Vector3 vel;
+
+    [SerializeField]
+    float smoothing;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         cam = Camera.main;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetMouseButtonDown(1))
+	    if(Input.GetMouseButtonDown(1) && stun_lock == 0)
         {
             RaycastHit hit = new RaycastHit();
             bool b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("pickupable"));
 
             if(b)
             {
-                to_pick_up.val = hit.collider.gameObject;
+                //to_pick_up.val = hit.collider.gameObject;
+                StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit.collider.gameObject));
             }
         }
 	}
+
+
+    IEnumerator go(Vector3 target,GameObject o)
+    {
+        Vector3 start = o.transform.position;
+        Vector3 cur = o.transform.position;
+       // float total_height = target.y - o.transform.position.y;
+        vel = Vector3.zero;
+        stun_lock.val++;
+        o.layer = LayerMask.NameToLayer("picked_up");
+        StartCoroutine(rotaty_rotaty(o));
+        while (Input.GetKey(KeyCode.Mouse1) && Vector3.Distance(o.transform.position,target) > .25f)
+        {
+            cur = Vector3.SmoothDamp(cur, target, ref vel, smoothing);
+            o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
+            yield return null;
+        }
+        yield return new WaitUntil(() => !Input.GetKey(KeyCode.Mouse1));
+        stun_lock.val--;
+        Quaternion q = o.transform.rotation;
+        float dist = Vector3.Distance(o.transform.position, start);
+        while (Vector3.Distance(o.transform.position, start) > .001f)
+        {
+            cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 1.5f);
+            o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
+            o.transform.rotation = Quaternion.Lerp(q, Quaternion.identity,1 - Vector3.Distance(o.transform.position, start) / dist);
+            yield return null;
+        }
+        o.layer = LayerMask.NameToLayer("pickupable");
+    }
+
+
+    IEnumerator rotaty_rotaty(GameObject o)
+    {
+        while(Input.GetKey(KeyCode.Mouse1))
+        {
+            o.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"),-Input.GetAxis("Mouse X"),0) * Time.deltaTime * rotate_speed);
+            yield return null;
+        }
+
+    }
 }
