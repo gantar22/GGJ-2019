@@ -136,7 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6b258d56897d24ab58705f459101b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  to_pick_up: {fileID: 11400000, guid: ca4c335d223f6b7489087720734301db, type: 2}
+  stun_lock: {fileID: 11400000, guid: 584b436a39da86741bc201d887a933ac, type: 2}
+  rotate_speed: 20
+  smoothing: 0.2
 --- !u!1 &542256393
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1799459b088794fa82a1664a15c9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothing: 0
 --- !u!65 &542256395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -372,6 +375,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: stun
+      value: 
+      objectReference: {fileID: 11400000, guid: 584b436a39da86741bc201d887a933ac,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &1254514173
@@ -393,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1254514174
 Transform:
   m_ObjectHideFlags: 0
