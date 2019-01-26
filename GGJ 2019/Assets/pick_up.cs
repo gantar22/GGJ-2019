@@ -36,15 +36,21 @@ public class pick_up : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetMouseButtonDown(1) && stun_lock == 0)
+        if (Input.GetMouseButtonDown(1) && stun_lock == 0)
         {
             RaycastHit hit = new RaycastHit();
             bool b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("pickupable"));
 
-            if(b)
+            if (b)
             {
                 //to_pick_up.val = hit.collider.gameObject;
                 StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit.collider.gameObject));
+            }
+            b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("interactable"));
+
+            if (b)
+            {
+                hit.collider.gameObject.GetComponent<Interactable>().act();
             }
         }
 	}
