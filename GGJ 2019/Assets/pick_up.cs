@@ -56,7 +56,7 @@ public class pick_up : MonoBehaviour {
     {
         Vector3 start = o.transform.position;
         Vector3 cur = o.transform.position;
-       // float total_height = target.y - o.transform.position.y;
+        //float total_height = target.y - o.transform.position.y;
         vel = Vector3.zero;
         stun_lock.val++;
         o.layer = LayerMask.NameToLayer("picked_up");
@@ -68,17 +68,22 @@ public class pick_up : MonoBehaviour {
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
             yield return null;
         }
+
+        
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Mouse1));
-        stun_lock.val--;
+        
         Quaternion q = o.transform.rotation;
         float dist = Vector3.Distance(o.transform.position, start);
-        while (Vector3.Distance(o.transform.position, start) > .001f)
+        while (Vector3.Distance(o.transform.position, start) > .3f)
         {
-            cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 1.5f);
+            cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 2f);
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
             o.transform.rotation = Quaternion.Lerp(q, Quaternion.identity,1 - Vector3.Distance(o.transform.position, start) / dist);
             yield return null;
         }
+        o.transform.position = start;
+        o.transform.rotation = Quaternion.identity;
+        stun_lock.val--;
         o.layer = LayerMask.NameToLayer("pickupable");
     }
 
