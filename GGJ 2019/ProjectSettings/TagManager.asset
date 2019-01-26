@@ -15,8 +15,8 @@ TagManager:
   - 
   - pickupable
   - picked_up
-  - 
-  - 
+  - interactable
+  - blur
   - 
   - 
   - 

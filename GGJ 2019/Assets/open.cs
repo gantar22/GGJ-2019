@@ -18,17 +18,8 @@ public class open : Interactable
 
     public override void act()
     {
-        StartCoroutine(go());
+        GetComponent<Animator>().SetTrigger("open");
     }
 
-    IEnumerator go()
-    {
-        float theta = 0;
-        while(theta > -Mathf.PI / 2)
-        {
-            transform.rotation = Quaternion.Euler(Vector3.up * theta);
-            theta -= Time.deltaTime * rot_speed;
-            yield return null;
-        }
-    }
+
 }
