@@ -4,4 +4,17 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "events/audio_event")]
-public class audio_event_object : gen_event<Vector3,AudioClip>{}
+public class audio_event_object : ScriptableObject
+{
+    [SerializeField]
+    AudioEvent constant;
+
+    public class string_event : UnityEvent<AudioEvent> { }
+
+    public UnityEvent<AudioEvent> e = new string_event();
+
+    public void Invoke(string d) { e.Invoke(d); }
+
+    public void Invoke() { e.Invoke(constant); }
+
+}
