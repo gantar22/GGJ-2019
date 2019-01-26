@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering.PostProcessing;
 
 
 /*
@@ -20,10 +20,8 @@ public class pick_up : MonoBehaviour {
     float rotate_speed;
 
     [SerializeField]
-    UnityEngine.PostProcessing.PostProcessingProfile ppp_main;
-
-    [SerializeField]
-    UnityEngine.PostProcessing.PostProcessingProfile ppp_pickup;
+    PostProcessVolume blur_volume;
+    
 
     Vector3 vel;
 
@@ -56,29 +54,36 @@ public class pick_up : MonoBehaviour {
     {
         Vector3 start = o.transform.position;
         Vector3 cur = o.transform.position;
-       // float total_height = target.y - o.transform.position.y;
+        //float total_height = target.y - o.transform.position.y;
         vel = Vector3.zero;
         stun_lock.val++;
         o.layer = LayerMask.NameToLayer("picked_up");
         StartCoroutine(rotaty_rotaty(o));
+        float dist = Vector3.Distance(o.transform.position, target);
         while (Input.GetKey(KeyCode.Mouse1) && Vector3.Distance(o.transform.position,target) > .25f)
         {
-            
+            blur_volume.weight = Mathf.Lerp(0,1,1 - Vector3.Distance(o.transform.position, target) / dist);
             cur = Vector3.SmoothDamp(cur, target, ref vel, smoothing);
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
             yield return null;
         }
+        
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Mouse1));
-        stun_lock.val--;
+        
         Quaternion q = o.transform.rotation;
-        float dist = Vector3.Distance(o.transform.position, start);
-        while (Vector3.Distance(o.transform.position, start) > .001f)
+        dist = Vector3.Distance(o.transform.position, start);
+        while (Vector3.Distance(o.transform.position, start) > .3f)
         {
-            cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 1.5f);
+            blur_volume.weight = Mathf.Lerp(1,0, 1 - Vector3.Distance(o.transform.position, start) / dist);
+            cur = Vector3.SmoothDamp(cur, start, ref vel, smoothing / 2f);
             o.transform.position = cur;//new Vector3(cur.x, total_height * Mathf.Pow((cur.y - start.y) / total_height, 3) + start.y, cur.z);
             o.transform.rotation = Quaternion.Lerp(q, Quaternion.identity,1 - Vector3.Distance(o.transform.position, start) / dist);
             yield return null;
         }
+        blur_volume.weight = 0;
+        o.transform.position = start;
+        o.transform.rotation = Quaternion.identity;
+        stun_lock.val--;
         o.layer = LayerMask.NameToLayer("pickupable");
     }
 
