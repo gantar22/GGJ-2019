@@ -9,7 +9,7 @@ public class gen_var<T> : ScriptableObject, IValue<T>
     bool use_constant = false;
 
     [SerializeField]
-    T constant;
+    public T constant;
 
     [SerializeField]
     private T value;

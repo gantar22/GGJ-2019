@@ -67,3 +67,5 @@ public class gen_event<T, T2, T3> : ScriptableObject {
 	public void Invoke(T arg, T2 arg2, T3 arg3) { e.Invoke(arg, arg2, arg3); }
 
 }
+
+public class adhoc_event<T, T2, T3> : UnityEvent<T, T2, T3> { }

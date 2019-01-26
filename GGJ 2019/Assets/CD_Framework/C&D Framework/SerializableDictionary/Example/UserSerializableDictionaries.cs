@@ -24,7 +24,3 @@ public class MyClass
 
 [Serializable]
 public class QuaternionMyClassDictionary : SerializableDictionary<Quaternion, MyClass> {}
-
-
-[Serializable]
-public class mtc_object_event_dict : SerializableDictionary<mtc_Type, sync_event> { }
