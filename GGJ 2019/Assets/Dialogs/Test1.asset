@@ -13,11 +13,22 @@ MonoBehaviour:
   m_Name: Test1
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: This is a test piece of dialog for the [wobble]upcoming[/wobble] dialog
-      [wobble]system[/wobble].
+  - EntryText: It still doesn't feel like she's dead.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 0}
+  - EntryText: We didn't take enough pictures.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
+  - EntryText: She does like being in pictures.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
+  - EntryText: They don't make summers like that any more.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
   - EntryText: Here is the second piece of [wobble]text[/wobble].  There is no way
       to know if this works for sure.
     TextSpeed: 0
