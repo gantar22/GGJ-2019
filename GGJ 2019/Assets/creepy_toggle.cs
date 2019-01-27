@@ -20,6 +20,7 @@ public class creepy_toggle : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        creep.val = 0;
         foreach(int i in to_enable.Values)
             StartCoroutine(go(i,to_enable.Where(P => P.Value == i).Select(P => P.Key).ToList()));
         foreach (int i in to_disable.Values)
@@ -29,13 +30,13 @@ public class creepy_toggle : MonoBehaviour
     IEnumerator go(int threshold,List<GameObject> L)
     {
         yield return new WaitUntil(() => creep >= threshold);
-        foreach(GameObject go in L) go.SetActive(true);
+        foreach(GameObject gobj in L) gobj.SetActive(true);
     }
 
     IEnumerator gu(int threshold, List<GameObject> L)
     {
         yield return new WaitUntil(() => creep >= threshold);
-        foreach (GameObject go in L) go.SetActive(false);
+        foreach (GameObject gobj in L) gobj.SetActive(false);
     }
 }
 
