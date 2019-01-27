@@ -48,6 +48,11 @@ public class DialogDisplay : MonoBehaviour
 
     private readonly Regex _WobbleRegex = new Regex(@"(\[wobble\]).*?(\[\/wobble\])", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+    public void SetDialog(DialogAsset d)
+    {
+        _Dialog = d;
+    }
+
     [ContextMenu("Display (Test)")]
     public void Display()
     {

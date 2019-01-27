@@ -5,6 +5,8 @@ using cakeslice;
 
 public class pickupable : MonoBehaviour
 {
+    [SerializeField] private DialogDisplay dialogDisplay;
+    [SerializeField] private DialogAsset dialog;
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioClip letGoSound;
     protected bool firstPickup = true;
@@ -15,6 +17,11 @@ public class pickupable : MonoBehaviour
 
     public void OnPickupEvent()
     {
+        if( dialogDisplay && dialog)
+        {
+            dialogDisplay.SetDialog(dialog);
+            dialogDisplay.Display();
+        }
         if(pickupSound) AudioSource.PlayClipAtPoint(pickupSound, transform.position);
        OnPickup();
        firstPickup = false;

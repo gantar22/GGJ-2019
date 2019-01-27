@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
@@ -18,11 +18,16 @@ public class pick_up : MonoBehaviour {
     int_var stun_lock;
 
     [SerializeField]
+    bool_var dialogue_running;
+
+    [SerializeField]
     float rotate_speed;
 
     [SerializeField]
     PostProcessVolume blur_volume;
-    
+
+    [SerializeField]
+    float grab_distance;
 
     Vector3 vel;
 
@@ -35,8 +40,8 @@ public class pick_up : MonoBehaviour {
 	
 	private void Update () {
         RaycastHit hit1, hit2;
-        bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, Mathf.Infinity, 1 << LayerMask.NameToLayer("pickupable"));
-        bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, Mathf.Infinity, 1 << LayerMask.NameToLayer("interactable"));
+        bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, grab_distance, 1 << LayerMask.NameToLayer("pickupable"));
+        bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, grab_distance, 1 << LayerMask.NameToLayer("interactable"));
 
         bool click = Input.GetMouseButtonDown(1) && stun_lock == 0;
 
@@ -76,7 +81,7 @@ public class pick_up : MonoBehaviour {
             yield return null;
         }
         
-        yield return new WaitUntil(() => !Input.GetKey(KeyCode.Mouse1));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0) && !dialogue_running.val);
 
         pickupable p = o.GetComponent<pickupable>();
         if (p)
@@ -104,7 +109,7 @@ public class pick_up : MonoBehaviour {
 
     IEnumerator rotaty_rotaty(GameObject o)
     {
-        while(Input.GetKey(KeyCode.Mouse1))
+        while(stun_lock == 1)
         {
             o.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"),-Input.GetAxis("Mouse X"),0) * Time.deltaTime * rotate_speed);
             yield return null;
