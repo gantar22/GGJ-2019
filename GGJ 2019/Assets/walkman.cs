@@ -34,22 +34,25 @@ public class walkman : pickupable
 
     protected override void OnPickup()
     {
-       
+        StartCoroutine(play_sound());
     }
 
     IEnumerator play_sound()
     {
+        yield return new WaitForSeconds(.1f);
         dialog.val = true;
         ass.enabled = true;
-        yield return null;
-
-
+        yield return new WaitUntil(() => !ass.isPlaying);
+        dialog.val = false;
+        
     }
 
     public void tune(float t)
     {
-        volume += t * rotate_speed;
-        volume = Mathf.Clamp(0, 1, volume);
-        slider.position = Vector3.Lerp(slider_left.position,slider_right.position,volume);
+        print(t);
+        volume += (t * rotate_speed) * Mathf.Pow(1 - volume,3);
+        volume = Mathf.Clamp(volume,0, 1);
+        ass.volume = volume;
+        slider.position = Vector3.Lerp(slider_right.position, slider_left.position,volume);
     }
 }

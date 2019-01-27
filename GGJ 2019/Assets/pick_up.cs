@@ -51,9 +51,9 @@ public class pick_up : MonoBehaviour {
         if (hit1.collider) print(hit1.collider.gameObject);
 
         bool click = Input.GetMouseButtonDown(0) && stun_lock == 0;
-
         if (hover_pickupable)
         {
+            print("ASDFADSf");
             pickupable p = hit1.collider.GetComponent<pickupable>();
             p.OnHover();
             if (click)
@@ -78,6 +78,10 @@ public class pick_up : MonoBehaviour {
         vel = Vector3.zero;
         stun_lock.val++;
         o.layer = LayerMask.NameToLayer("picked_up");
+        foreach(Transform t in o.transform)
+        {
+            t.gameObject.layer = LayerMask.NameToLayer("picked_up");
+        }
         StartCoroutine(rotaty_rotaty(o));
         float dist = Vector3.Distance(o.transform.position, target);
         while ( Vector3.Distance(o.transform.position,target) > .25f)
@@ -111,6 +115,10 @@ public class pick_up : MonoBehaviour {
         o.transform.rotation = init_rot;
         stun_lock.val--;
         o.layer = LayerMask.NameToLayer("pickupable");
+        foreach (Transform t in o.transform)
+        {
+            t.gameObject.layer = LayerMask.NameToLayer("pickupable");
+        }
     }
 
 
@@ -119,7 +127,10 @@ public class pick_up : MonoBehaviour {
         while(stun_lock > 0)
         {
             if (o.GetComponent<walkman>())
+            {
                 o.GetComponent<walkman>().tune(Input.GetAxis("Mouse X") * Time.deltaTime);
+                o.transform.rotation = Quaternion.Lerp(o.transform.rotation, transform.rotation * Quaternion.Euler(0, 90, 35), Time.deltaTime * 3);
+            }
             else
                 o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0) * Time.deltaTime * rotate_speed);
             yield return null;

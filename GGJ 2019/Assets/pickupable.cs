@@ -14,7 +14,7 @@ public class pickupable : MonoBehaviour
     protected bool firstPickup = true;
 
     [SerializeField] public bool shouldOutlineOnHover = true;
-
+    [SerializeField]
     private Outline outline;
 
     public void OnPickupEvent()
