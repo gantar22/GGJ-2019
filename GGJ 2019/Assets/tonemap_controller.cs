@@ -41,8 +41,8 @@ public class tonemap_controller : MonoBehaviour
         {
             fade_time_current = fade_time;
         }
-        postpro_in.weight = fade_time_current / fade_time;
-        postpro_out.weight = 1.0f - fade_time_current / fade_time;
+        if(postpro_in) postpro_in.weight = fade_time_current / fade_time;
+        if(postpro_out) postpro_out.weight = 1.0f - fade_time_current / fade_time;
     }
 
     void StartNextAthmo()
