@@ -20,17 +20,48 @@ MonoBehaviour:
   - EntryText: We didn't take enough pictures.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
-    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
+    ExecuteOnExit: {fileID: 0}
   - EntryText: She doesn't like being in pictures.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
-    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
+    ExecuteOnExit: {fileID: 0}
   - EntryText: They don't make summers like that any more.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
-  - EntryText: Here is the second piece of [wobble]text[/wobble].  There is no way
-      to know if this works for sure.
+  - EntryText: I could have visited more.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
-    ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: She would have liked that.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: He was good for her.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: He was good for us.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: I wonder how Dad will take it.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: '...'
+    TextSpeed: -3
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: I think he'll be fine.
+    TextSpeed: -3
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: I've got to get out of here.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: I've got to get out of here.
+    TextSpeed: 0
+    ExecuteOnEnter: {fileID: 0}
+    ExecuteOnExit: {fileID: 0}
