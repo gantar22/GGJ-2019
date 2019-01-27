@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
 
     public void OnInteractEvent()
     {
-       AudioSource.PlayClipAtPoint(interactSound, transform.position);
+       if(interactSound) AudioSource.PlayClipAtPoint(interactSound, transform.position);
        act();
        firstInteract = false;
     }

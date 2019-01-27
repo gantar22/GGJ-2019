@@ -14,4 +14,9 @@ public class photograph : pickupable
             creepiness.val++;
         }
     }
+
+    protected override void OnLetGo()
+    {
+        GetComponent<Renderer>().enabled = false;
+    }
 }

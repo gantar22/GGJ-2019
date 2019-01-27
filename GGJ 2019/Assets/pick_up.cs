@@ -81,7 +81,13 @@ public class pick_up : MonoBehaviour {
         }
         
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Mouse1));
-        
+
+        pickupable p = o.GetComponent<pickupable>();
+        if (p)
+        {
+            p.OnLetGoEvent();
+        }
+
         Quaternion q = o.transform.rotation;
         dist = Vector3.Distance(o.transform.position, start);
         while (Vector3.Distance(o.transform.position, start) > .3f)
