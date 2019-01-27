@@ -1,0 +1,648 @@
+fileFormatVersion: 2
+guid: 27fafcb9f90f6ce43ba4278a5cba616f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ash
+    100002: bathroom
+    100004: bathtub
+    100006: bathtub_legs
+    100008: bathtub_tub
+    100010: Bedroom_wardrobe:group5
+    100012: Bedroom_wardrobe:pasted__group3
+    100014: Bedroom_wardrobe:pasted__group4
+    100016: Bedroom_wardrobe:pasted__pasted__group3
+    100018: Bedroom_wardrobe:pasted__pasted__pasted__pCube12
+    100020: Bedroom_wardrobe:pasted__pasted__pCube12
+    100022: Bedroom_wardrobe:pasted__pasted__pCube12 1
+    100024: Bedroom_wardrobe:pasted__pCube12
+    100026: Bedroom_wardrobe:pasted__pCube13
+    100028: Bedroom_wardrobe:pasted__transform3
+    100030: Bedroom_wardrobe:pasted__transform4
+    100032: Bedroom_wardrobe:pasted__transform5
+    100034: Bedroom_wardrobe:pasted__transform6
+    100036: Bedroom_wardrobe:pCube14
+    100038: Bedroom_wardrobe:pCube15
+    100040: Bedroom_wardrobe:polySurface1
+    100042: Bedroom_wardrobe:polySurface2
+    100044: Bedroom_wardrobe:polySurface3
+    100046: Bedroom_wardrobe:polySurface3 1
+    100048: Bedroom_wardrobe:polySurface4
+    100050: Bedroom_wardrobe:transform10
+    100052: Bedroom_wardrobe:transform11
+    100054: Bedroom_wardrobe:transform7
+    100056: Bedroom_wardrobe:transform8
+    100058: Bedroom_wardrobe:transform9
+    100060: floor2with_doors
+    100062: //RootNode
+    100064: floor3withdoors_pCube14
+    100066: floor3withdoors_pCube15
+    100068: floor3withdoors_pCube16
+    100070: floor_2_furniture_noninteractable
+    100072: group
+    100074: group 1
+    100076: group 2
+    100078: group1
+    100080: group2
+    100082: group3
+    100084: lamp
+    100086: lampshade
+    100088: lampstand
+    100090: lightbulb
+    100092: Living_room_dresser1
+    100094: Living_room_dresser:group
+    100096: Living_room_dresser:group1
+    100098: Living_room_dresser:group2
+    100100: Living_room_dresser:group3
+    100102: Living_room_dresser:group4
+    100104: Living_room_dresser:pasted__group
+    100106: Living_room_dresser:pasted__group 1
+    100108: Living_room_dresser:pasted__group1
+    100110: Living_room_dresser:pasted__group3
+    100112: Living_room_dresser:pasted__pasted__group
+    100114: Living_room_dresser:pasted__pasted__pCube12
+    100116: Living_room_dresser:pasted__pCube12
+    100118: Living_room_dresser:pasted__pCube12 1
+    100120: Living_room_dresser:pCube1
+    100122: Living_room_dresser:pCube12
+    100124: Living_room_dresser:pCube5
+    100126: Living_room_dresser:pCube6
+    100128: Living_room_dresser:transform1
+    100130: Living_room_dresser:transform2
+    100132: Living_room_dresser:transform3
+    100134: Living_room_dresser:transform4
+    100136: Living_room_dresser:transform5
+    100138: Living_room_dresser:transform6
+    100140: Living_room_dresser:walls
+    100142: master_bed
+    100144: master_bedroom
+    100146: matress
+    100148: medicine_cabinet
+    100150: medicine_cabinet_shelves
+    100152: mirror_door
+    100154: pasted__bathroom
+    100156: pasted__bathtub
+    100158: pasted__floor_2_furniture_noninteractable
+    100160: pasted__group
+    100162: pasted__group2
+    100164: pasted__pasted__group
+    100166: pasted__pasted__pasted__pPipe1
+    100168: pasted__pasted__pCube97
+    100170: pasted__pasted__pPipe1
+    100172: pasted__pCube102
+    100174: pasted__pCube102 1
+    100176: pasted__pCube97
+    100178: pasted__pCube97 1
+    100180: pasted__pPipe1
+    100182: pasted__shower_curtain_rings
+    100184: pCube102
+    100186: pCube16
+    100188: pCube17
+    100190: pCube18
+    100192: pCube97
+    100194: pCube98
+    100196: pCube99
+    100198: player_bed
+    100200: pPlane8
+    100202: shower_curtain
+    100204: shower_curtain_rack
+    100206: shower_curtain_rings
+    100208: showerhead
+    100210: sink:sink1
+    100212: toilet
+    100214: toilet_backlid
+    100216: toilet_body
+    100218: toilet_body 1
+    100220: toilet_handle
+    100222: toilet_lid
+    100224: towelrack
+    100226: transform1
+    100228: transform10
+    100230: transform11
+    100232: transform12
+    100234: transform13
+    100236: transform2
+    100238: transform3
+    100240: transform4
+    100242: transform5
+    100244: transform6
+    100246: transform7
+    100248: transform8
+    100250: transform9
+    100252: wardrobe
+    100254: wardrobe_door_1
+    100256: wardrobe_door_2
+    400000: ash
+    400002: bathroom
+    400004: bathtub
+    400006: bathtub_legs
+    400008: bathtub_tub
+    400010: Bedroom_wardrobe:group5
+    400012: Bedroom_wardrobe:pasted__group3
+    400014: Bedroom_wardrobe:pasted__group4
+    400016: Bedroom_wardrobe:pasted__pasted__group3
+    400018: Bedroom_wardrobe:pasted__pasted__pasted__pCube12
+    400020: Bedroom_wardrobe:pasted__pasted__pCube12
+    400022: Bedroom_wardrobe:pasted__pasted__pCube12 1
+    400024: Bedroom_wardrobe:pasted__pCube12
+    400026: Bedroom_wardrobe:pasted__pCube13
+    400028: Bedroom_wardrobe:pasted__transform3
+    400030: Bedroom_wardrobe:pasted__transform4
+    400032: Bedroom_wardrobe:pasted__transform5
+    400034: Bedroom_wardrobe:pasted__transform6
+    400036: Bedroom_wardrobe:pCube14
+    400038: Bedroom_wardrobe:pCube15
+    400040: Bedroom_wardrobe:polySurface1
+    400042: Bedroom_wardrobe:polySurface2
+    400044: Bedroom_wardrobe:polySurface3
+    400046: Bedroom_wardrobe:polySurface3 1
+    400048: Bedroom_wardrobe:polySurface4
+    400050: Bedroom_wardrobe:transform10
+    400052: Bedroom_wardrobe:transform11
+    400054: Bedroom_wardrobe:transform7
+    400056: Bedroom_wardrobe:transform8
+    400058: Bedroom_wardrobe:transform9
+    400060: floor2with_doors
+    400062: //RootNode
+    400064: floor3withdoors_pCube14
+    400066: floor3withdoors_pCube15
+    400068: floor3withdoors_pCube16
+    400070: floor_2_furniture_noninteractable
+    400072: group
+    400074: group 1
+    400076: group 2
+    400078: group1
+    400080: group2
+    400082: group3
+    400084: lamp
+    400086: lampshade
+    400088: lampstand
+    400090: lightbulb
+    400092: Living_room_dresser1
+    400094: Living_room_dresser:group
+    400096: Living_room_dresser:group1
+    400098: Living_room_dresser:group2
+    400100: Living_room_dresser:group3
+    400102: Living_room_dresser:group4
+    400104: Living_room_dresser:pasted__group
+    400106: Living_room_dresser:pasted__group 1
+    400108: Living_room_dresser:pasted__group1
+    400110: Living_room_dresser:pasted__group3
+    400112: Living_room_dresser:pasted__pasted__group
+    400114: Living_room_dresser:pasted__pasted__pCube12
+    400116: Living_room_dresser:pasted__pCube12
+    400118: Living_room_dresser:pasted__pCube12 1
+    400120: Living_room_dresser:pCube1
+    400122: Living_room_dresser:pCube12
+    400124: Living_room_dresser:pCube5
+    400126: Living_room_dresser:pCube6
+    400128: Living_room_dresser:transform1
+    400130: Living_room_dresser:transform2
+    400132: Living_room_dresser:transform3
+    400134: Living_room_dresser:transform4
+    400136: Living_room_dresser:transform5
+    400138: Living_room_dresser:transform6
+    400140: Living_room_dresser:walls
+    400142: master_bed
+    400144: master_bedroom
+    400146: matress
+    400148: medicine_cabinet
+    400150: medicine_cabinet_shelves
+    400152: mirror_door
+    400154: pasted__bathroom
+    400156: pasted__bathtub
+    400158: pasted__floor_2_furniture_noninteractable
+    400160: pasted__group
+    400162: pasted__group2
+    400164: pasted__pasted__group
+    400166: pasted__pasted__pasted__pPipe1
+    400168: pasted__pasted__pCube97
+    400170: pasted__pasted__pPipe1
+    400172: pasted__pCube102
+    400174: pasted__pCube102 1
+    400176: pasted__pCube97
+    400178: pasted__pCube97 1
+    400180: pasted__pPipe1
+    400182: pasted__shower_curtain_rings
+    400184: pCube102
+    400186: pCube16
+    400188: pCube17
+    400190: pCube18
+    400192: pCube97
+    400194: pCube98
+    400196: pCube99
+    400198: player_bed
+    400200: pPlane8
+    400202: shower_curtain
+    400204: shower_curtain_rack
+    400206: shower_curtain_rings
+    400208: showerhead
+    400210: sink:sink1
+    400212: toilet
+    400214: toilet_backlid
+    400216: toilet_body
+    400218: toilet_body 1
+    400220: toilet_handle
+    400222: toilet_lid
+    400224: towelrack
+    400226: transform1
+    400228: transform10
+    400230: transform11
+    400232: transform12
+    400234: transform13
+    400236: transform2
+    400238: transform3
+    400240: transform4
+    400242: transform5
+    400244: transform6
+    400246: transform7
+    400248: transform8
+    400250: transform9
+    400252: wardrobe
+    400254: wardrobe_door_1
+    400256: wardrobe_door_2
+    2100000: wood_tex_2
+    2100002: grime
+    2100004: metal_tex_2
+    2100006: floral_2
+    2100008: metal_tex
+    2100010: white
+    2100012: sink_sink
+    2100014: wood_tex_1
+    2100016: floral_3
+    2100018: white_cloth
+    2100020: floral_1_tex
+    2100022: lambert1
+    2100024: wood_tex_3
+    2100026: ash1
+    2100028: floor2_tex1
+    2100030: flloor2_tex2
+    2300000: ash
+    2300002: bathtub_legs
+    2300004: bathtub_tub
+    2300006: Bedroom_wardrobe:pCube14
+    2300008: Bedroom_wardrobe:pCube15
+    2300010: Bedroom_wardrobe:polySurface3
+    2300012: floor3withdoors_pCube16
+    2300014: lampshade
+    2300016: lampstand
+    2300018: lightbulb
+    2300020: Living_room_dresser1
+    2300022: Living_room_dresser:pCube1
+    2300024: matress
+    2300026: medicine_cabinet
+    2300028: medicine_cabinet_shelves
+    2300030: mirror_door
+    2300032: pasted__pasted__pasted__pPipe1
+    2300034: pasted__pasted__pPipe1
+    2300036: pasted__pCube102
+    2300038: pasted__pCube102 1
+    2300040: pasted__pPipe1
+    2300042: pCube102
+    2300044: pCube98
+    2300046: pCube99
+    2300048: player_bed
+    2300050: pPlane8
+    2300052: shower_curtain
+    2300054: shower_curtain_rack
+    2300056: shower_curtain_rings
+    2300058: showerhead
+    2300060: sink:sink1
+    2300062: toilet_body
+    2300064: towelrack
+    2300066: wardrobe_door_1
+    2300068: wardrobe_door_2
+    3300000: ash
+    3300002: bathtub_legs
+    3300004: bathtub_tub
+    3300006: Bedroom_wardrobe:pCube14
+    3300008: Bedroom_wardrobe:pCube15
+    3300010: Bedroom_wardrobe:polySurface3
+    3300012: floor3withdoors_pCube16
+    3300014: lampshade
+    3300016: lampstand
+    3300018: lightbulb
+    3300020: Living_room_dresser1
+    3300022: Living_room_dresser:pCube1
+    3300024: matress
+    3300026: medicine_cabinet
+    3300028: medicine_cabinet_shelves
+    3300030: mirror_door
+    3300032: pasted__pasted__pasted__pPipe1
+    3300034: pasted__pasted__pPipe1
+    3300036: pasted__pCube102
+    3300038: pasted__pCube102 1
+    3300040: pasted__pPipe1
+    3300042: pCube102
+    3300044: pCube98
+    3300046: pCube99
+    3300048: player_bed
+    3300050: pPlane8
+    3300052: shower_curtain
+    3300054: shower_curtain_rack
+    3300056: shower_curtain_rings
+    3300058: showerhead
+    3300060: sink:sink1
+    3300062: toilet_body
+    3300064: towelrack
+    3300066: wardrobe_door_1
+    3300068: wardrobe_door_2
+    4300000: wardrobe_door_1
+    4300002: wardrobe_door_2
+    4300004: mirror_door
+    4300006: showerhead
+    4300008: shower_curtain_rack
+    4300010: shower_curtain
+    4300012: shower_curtain_rings
+    4300014: pasted__pPipe1
+    4300016: pasted__pasted__pPipe1
+    4300018: bathtub_tub
+    4300020: bathtub_legs
+    4300022: pasted__pasted__pasted__pPipe1
+    4300024: medicine_cabinet
+    4300026: medicine_cabinet_shelves
+    4300028: pasted__pCube102
+    4300030: pasted__pCube102
+    4300032: towelrack
+    4300034: sink:sink1
+    4300036: toilet_body
+    4300038: pCube98
+    4300040: pPlane8
+    4300042: pCube99
+    4300044: matress
+    4300046: lampshade
+    4300048: lampstand
+    4300050: lightbulb
+    4300052: Living_room_dresser1
+    4300054: Living_room_dresser:pCube1
+    4300056: Bedroom_wardrobe:pCube14
+    4300058: Bedroom_wardrobe:polySurface3
+    4300060: Bedroom_wardrobe:pCube15
+    4300062: ash
+    4300064: player_bed
+    4300066: floor3withdoors_pCube16
+    4300068: pCube102
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ash1
+    second: {fileID: 2100000, guid: be44372ccb84dfb4a8c3cbe0fa12e8d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flloor2_tex2
+    second: {fileID: 2100000, guid: 22a46ba8667225744858a90b5d3ea0de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor2_tex1
+    second: {fileID: 2100000, guid: 922d00fd88e3833488bee15180ce78f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floral_1_tex
+    second: {fileID: 2100000, guid: aec4c42d11aba474ab97f93453e95c37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floral_2
+    second: {fileID: 2100000, guid: 4868ff934f9950d459595b7932a9b13f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floral_3
+    second: {fileID: 2100000, guid: ba449e49fb294a24eb1df247412cd2b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grime
+    second: {fileID: 2100000, guid: 1d8049e7d0a6f314b8029d0c9cfcf212, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: ac634d2152613e146a70ed512fe025a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_tex
+    second: {fileID: 2100000, guid: f1b18a4781d7e8846ae9ff7ab2d32b2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_tex_2
+    second: {fileID: 2100000, guid: 260ae1a163f8f664c8f9e19194620696, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sink_sink
+    second: {fileID: 2100000, guid: e13ba4794d5fb15409c0cbcea66da75c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white
+    second: {fileID: 2100000, guid: d3e28246b5b167440bb74697f87572ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_cloth
+    second: {fileID: 2100000, guid: f6ac57e74d4266c43883a3d16cd4a9b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_tex_1
+    second: {fileID: 2100000, guid: 19df13e575419694a80a7b6d047356e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_tex_2
+    second: {fileID: 2100000, guid: f9201a2e038d0394ab6dc5b822f63bcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_tex_3
+    second: {fileID: 2100000, guid: 28656a5c42288694b9c4b14356f93efa, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric19_nrm
+    second: {fileID: 2800000, guid: abd056e9202094c4a8b221815df95a9e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal09_col
+    second: {fileID: 2800000, guid: 38fe4d32ce4e1564a977988699f80d23, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal09_nrm
+    second: {fileID: 2800000, guid: e9ad15eba90f51a40981aa9504c73484, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal16_rgh
+    second: {fileID: 2800000, guid: 91be29d07bfe2134c9e1ede8511fd8cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal19_nrm
+    second: {fileID: 2800000, guid: eea1e2c756b14234b84d5dd6077c0ead, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal19_rgh
+    second: {fileID: 2800000, guid: 8a339364916be1543b3d2adc64f6c9a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood05_col
+    second: {fileID: 2800000, guid: 6159718a61d4b8545ab7f5aab88cde56, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood05_nrm
+    second: {fileID: 2800000, guid: 30f5eb009a459d546a06921eb56c467a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood06_col
+    second: {fileID: 2800000, guid: 8ab7d29094929a04b9287870bd122c70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood06_nrm
+    second: {fileID: 2800000, guid: 0e6c0b59ad3430345b4f001bcd4533b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood18_col
+    second: {fileID: 2800000, guid: e79d0a2e6b3f0fa4dac3ddb67c28a851, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood18_nrm
+    second: {fileID: 2800000, guid: a25f4b0894c201842ab0b4e82b5ce025, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ash_texture
+    second: {fileID: 2800000, guid: 6a8fb735f4cedcc43b7bf21b965bce12, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bathtub_texture
+    second: {fileID: 2800000, guid: 95f307f5d7a7040448f6ad4b98f5eaf2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floor 2_tex1
+    second: {fileID: 2800000, guid: fb07f4e39c8ef7e459282655b667bd5d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floral_1
+    second: {fileID: 2800000, guid: d90c95c88a8594b4a89eb4aadb643ce6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floral_2
+    second: {fileID: 2800000, guid: 008a24df999b7274a91bbadc2ede2a68, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floral_3
+    second: {fileID: 2800000, guid: 6121895b9471a1d409c8348fcde31086, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sink_texture
+    second: {fileID: 2800000, guid: 7d36ed0cab483824d833285c32317c5a, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
