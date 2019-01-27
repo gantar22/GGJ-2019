@@ -17,7 +17,16 @@ public class intro_event : MonoBehaviour
     {
         start.Invoke();
         Invoke("go", 1);
-        end.addListener(() => GetComponent<Animator>().SetTrigger("go"));
+        end.addListener(() =>
+        {
+            GetComponent<Animator>().SetTrigger("go");
+            Invoke("sl",2.5f);
+        });
+    }
+
+    void sl()
+    {
+        init_d.Invoke(1);
     }
 
     void go()

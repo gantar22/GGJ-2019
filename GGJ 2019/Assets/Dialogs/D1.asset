@@ -17,7 +17,11 @@ MonoBehaviour:
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}
-  - EntryText: She doesn't like being in pictures.
-    TextSpeed: 0
+  - EntryText: 'She doesn''t ...   '
+    TextSpeed: -1.38
+    ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
+    ExecuteOnExit: {fileID: 0}
+  - EntryText: She didn't like being in pictures.
+    TextSpeed: 2.09
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}
