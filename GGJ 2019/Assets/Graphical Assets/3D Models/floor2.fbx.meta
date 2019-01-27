@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: dcab09ccd92dd564d980e8ef1411900e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bathroom
+    100002: bathtub
+    100004: bathtub 1
+    100006: bathtub_legs
+    100008: Bedroom_wardrobe:group5
+    100010: Bedroom_wardrobe:pasted__group3
+    100012: Bedroom_wardrobe:pasted__group4
+    100014: Bedroom_wardrobe:pasted__pasted__group3
+    100016: Bedroom_wardrobe:pasted__pasted__pasted__pCube12
+    100018: Bedroom_wardrobe:pasted__pasted__pCube12
+    100020: Bedroom_wardrobe:pasted__pasted__pCube12 1
+    100022: Bedroom_wardrobe:pasted__pCube12
+    100024: Bedroom_wardrobe:pasted__pCube13
+    100026: Bedroom_wardrobe:pasted__transform3
+    100028: Bedroom_wardrobe:pasted__transform4
+    100030: Bedroom_wardrobe:pasted__transform5
+    100032: Bedroom_wardrobe:pasted__transform6
+    100034: Bedroom_wardrobe:pCube14
+    100036: Bedroom_wardrobe:pCube15
+    100038: Bedroom_wardrobe:polySurface1
+    100040: Bedroom_wardrobe:polySurface2
+    100042: Bedroom_wardrobe:polySurface3
+    100044: Bedroom_wardrobe:polySurface3 1
+    100046: Bedroom_wardrobe:polySurface4
+    100048: Bedroom_wardrobe:transform10
+    100050: Bedroom_wardrobe:transform11
+    100052: Bedroom_wardrobe:transform7
+    100054: Bedroom_wardrobe:transform8
+    100056: Bedroom_wardrobe:transform9
+    100058: //RootNode
+    100060: floor_2_furniture_noninteractable
+    100062: group
+    100064: group 1
+    100066: group 2
+    100068: group1
+    100070: group2
+    100072: group3
+    100074: lamp
+    100076: lampshade
+    100078: lampstand
+    100080: lightbulb
+    100082: Living_room_dresser1
+    100084: Living_room_dresser:group
+    100086: Living_room_dresser:group1
+    100088: Living_room_dresser:group2
+    100090: Living_room_dresser:group3
+    100092: Living_room_dresser:group4
+    100094: Living_room_dresser:pasted__group
+    100096: Living_room_dresser:pasted__group 1
+    100098: Living_room_dresser:pasted__group1
+    100100: Living_room_dresser:pasted__group3
+    100102: Living_room_dresser:pasted__pasted__group
+    100104: Living_room_dresser:pasted__pasted__pCube12
+    100106: Living_room_dresser:pasted__pCube12
+    100108: Living_room_dresser:pasted__pCube12 1
+    100110: Living_room_dresser:pCube1
+    100112: Living_room_dresser:pCube12
+    100114: Living_room_dresser:pCube5
+    100116: Living_room_dresser:pCube6
+    100118: Living_room_dresser:transform1
+    100120: Living_room_dresser:transform2
+    100122: Living_room_dresser:transform3
+    100124: Living_room_dresser:transform4
+    100126: Living_room_dresser:transform5
+    100128: Living_room_dresser:transform6
+    100130: Living_room_dresser:walls
+    100132: master_bed
+    100134: master_bedroom
+    100136: medicine_cabinet
+    100138: medicine_cabinet_shelves
+    100140: mirror_door
+    100142: pasted__group
+    100144: pasted__group 1
+    100146: pasted__pasted__pCube97
+    100148: pasted__pasted__pPipe1
+    100150: pasted__pCube102
+    100152: pasted__pCube102 1
+    100154: pasted__pCube97
+    100156: pasted__pCube97 1
+    100158: pasted__pPipe1
+    100160: pasted__pPipe1 1
+    100162: pCube98
+    100164: pCube99
+    100166: player_bed
+    100168: pPlane8
+    100170: shower_curtain
+    100172: shower_curtain_rack
+    100174: shower_curtain_rings
+    100176: showerhead
+    100178: sink:sink1
+    100180: toilet
+    100182: toilet_backlid
+    100184: toilet_body
+    100186: toilet_handle
+    100188: toilet_lid
+    100190: towelrack
+    100192: transform1
+    100194: transform3
+    100196: transform4
+    100198: wardrobe
+    100200: wardrobe_door_1
+    100202: wardrobe_door_2
+    400000: bathroom
+    400002: bathtub
+    400004: bathtub 1
+    400006: bathtub_legs
+    400008: Bedroom_wardrobe:group5
+    400010: Bedroom_wardrobe:pasted__group3
+    400012: Bedroom_wardrobe:pasted__group4
+    400014: Bedroom_wardrobe:pasted__pasted__group3
+    400016: Bedroom_wardrobe:pasted__pasted__pasted__pCube12
+    400018: Bedroom_wardrobe:pasted__pasted__pCube12
+    400020: Bedroom_wardrobe:pasted__pasted__pCube12 1
+    400022: Bedroom_wardrobe:pasted__pCube12
+    400024: Bedroom_wardrobe:pasted__pCube13
+    400026: Bedroom_wardrobe:pasted__transform3
+    400028: Bedroom_wardrobe:pasted__transform4
+    400030: Bedroom_wardrobe:pasted__transform5
+    400032: Bedroom_wardrobe:pasted__transform6
+    400034: Bedroom_wardrobe:pCube14
+    400036: Bedroom_wardrobe:pCube15
+    400038: Bedroom_wardrobe:polySurface1
+    400040: Bedroom_wardrobe:polySurface2
+    400042: Bedroom_wardrobe:polySurface3
+    400044: Bedroom_wardrobe:polySurface3 1
+    400046: Bedroom_wardrobe:polySurface4
+    400048: Bedroom_wardrobe:transform10
+    400050: Bedroom_wardrobe:transform11
+    400052: Bedroom_wardrobe:transform7
+    400054: Bedroom_wardrobe:transform8
+    400056: Bedroom_wardrobe:transform9
+    400058: //RootNode
+    400060: floor_2_furniture_noninteractable
+    400062: group
+    400064: group 1
+    400066: group 2
+    400068: group1
+    400070: group2
+    400072: group3
+    400074: lamp
+    400076: lampshade
+    400078: lampstand
+    400080: lightbulb
+    400082: Living_room_dresser1
+    400084: Living_room_dresser:group
+    400086: Living_room_dresser:group1
+    400088: Living_room_dresser:group2
+    400090: Living_room_dresser:group3
+    400092: Living_room_dresser:group4
+    400094: Living_room_dresser:pasted__group
+    400096: Living_room_dresser:pasted__group 1
+    400098: Living_room_dresser:pasted__group1
+    400100: Living_room_dresser:pasted__group3
+    400102: Living_room_dresser:pasted__pasted__group
+    400104: Living_room_dresser:pasted__pasted__pCube12
+    400106: Living_room_dresser:pasted__pCube12
+    400108: Living_room_dresser:pasted__pCube12 1
+    400110: Living_room_dresser:pCube1
+    400112: Living_room_dresser:pCube12
+    400114: Living_room_dresser:pCube5
+    400116: Living_room_dresser:pCube6
+    400118: Living_room_dresser:transform1
+    400120: Living_room_dresser:transform2
+    400122: Living_room_dresser:transform3
+    400124: Living_room_dresser:transform4
+    400126: Living_room_dresser:transform5
+    400128: Living_room_dresser:transform6
+    400130: Living_room_dresser:walls
+    400132: master_bed
+    400134: master_bedroom
+    400136: medicine_cabinet
+    400138: medicine_cabinet_shelves
+    400140: mirror_door
+    400142: pasted__group
+    400144: pasted__group 1
+    400146: pasted__pasted__pCube97
+    400148: pasted__pasted__pPipe1
+    400150: pasted__pCube102
+    400152: pasted__pCube102 1
+    400154: pasted__pCube97
+    400156: pasted__pCube97 1
+    400158: pasted__pPipe1
+    400160: pasted__pPipe1 1
+    400162: pCube98
+    400164: pCube99
+    400166: player_bed
+    400168: pPlane8
+    400170: shower_curtain
+    400172: shower_curtain_rack
+    400174: shower_curtain_rings
+    400176: showerhead
+    400178: sink:sink1
+    400180: toilet
+    400182: toilet_backlid
+    400184: toilet_body
+    400186: toilet_handle
+    400188: toilet_lid
+    400190: towelrack
+    400192: transform1
+    400194: transform3
+    400196: transform4
+    400198: wardrobe
+    400200: wardrobe_door_1
+    400202: wardrobe_door_2
+    2100000: lambert1
+    2100002: lambert3
+    2100004: lambert4
+    2100006: lambert7
+    2100008: lambert6
+    2100010: lambert5
+    2100012: lambert2
+    2100014: lambert8
+    2300000: bathtub 1
+    2300002: bathtub_legs
+    2300004: Bedroom_wardrobe:pCube14
+    2300006: Bedroom_wardrobe:pCube15
+    2300008: Bedroom_wardrobe:polySurface3
+    2300010: lampshade
+    2300012: lampstand
+    2300014: lightbulb
+    2300016: Living_room_dresser1
+    2300018: Living_room_dresser:pCube1
+    2300020: medicine_cabinet
+    2300022: medicine_cabinet_shelves
+    2300024: mirror_door
+    2300026: pasted__pasted__pPipe1
+    2300028: pasted__pCube102
+    2300030: pasted__pCube102 1
+    2300032: pasted__pPipe1
+    2300034: pasted__pPipe1 1
+    2300036: pCube98
+    2300038: pCube99
+    2300040: player_bed
+    2300042: pPlane8
+    2300044: shower_curtain
+    2300046: shower_curtain_rack
+    2300048: shower_curtain_rings
+    2300050: showerhead
+    2300052: sink:sink1
+    2300054: toilet_backlid
+    2300056: toilet_body
+    2300058: toilet_handle
+    2300060: toilet_lid
+    2300062: towelrack
+    2300064: wardrobe_door_1
+    2300066: wardrobe_door_2
+    3300000: bathtub 1
+    3300002: bathtub_legs
+    3300004: Bedroom_wardrobe:pCube14
+    3300006: Bedroom_wardrobe:pCube15
+    3300008: Bedroom_wardrobe:polySurface3
+    3300010: lampshade
+    3300012: lampstand
+    3300014: lightbulb
+    3300016: Living_room_dresser1
+    3300018: Living_room_dresser:pCube1
+    3300020: medicine_cabinet
+    3300022: medicine_cabinet_shelves
+    3300024: mirror_door
+    3300026: pasted__pasted__pPipe1
+    3300028: pasted__pCube102
+    3300030: pasted__pCube102 1
+    3300032: pasted__pPipe1
+    3300034: pasted__pPipe1 1
+    3300036: pCube98
+    3300038: pCube99
+    3300040: player_bed
+    3300042: pPlane8
+    3300044: shower_curtain
+    3300046: shower_curtain_rack
+    3300048: shower_curtain_rings
+    3300050: showerhead
+    3300052: sink:sink1
+    3300054: toilet_backlid
+    3300056: toilet_body
+    3300058: toilet_handle
+    3300060: toilet_lid
+    3300062: towelrack
+    3300064: wardrobe_door_1
+    3300066: wardrobe_door_2
+    4300000: wardrobe_door_1
+    4300002: wardrobe_door_2
+    4300004: mirror_door
+    4300006: bathtub
+    4300008: bathtub_legs
+    4300010: showerhead
+    4300012: shower_curtain_rack
+    4300014: shower_curtain
+    4300016: shower_curtain_rings
+    4300018: pasted__pPipe1
+    4300020: pasted__pPipe1
+    4300022: pasted__pasted__pPipe1
+    4300024: medicine_cabinet
+    4300026: medicine_cabinet_shelves
+    4300028: pasted__pCube102
+    4300030: pasted__pCube102
+    4300032: towelrack
+    4300034: toilet_handle
+    4300036: toilet_backlid
+    4300038: toilet_lid
+    4300040: toilet_body
+    4300042: sink:sink1
+    4300044: pCube98
+    4300046: pPlane8
+    4300048: pCube99
+    4300050: lampshade
+    4300052: lampstand
+    4300054: lightbulb
+    4300056: Living_room_dresser1
+    4300058: Living_room_dresser:pCube1
+    4300060: Bedroom_wardrobe:pCube14
+    4300062: Bedroom_wardrobe:polySurface3
+    4300064: Bedroom_wardrobe:pCube15
+    4300066: player_bed
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

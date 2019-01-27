@@ -75,7 +75,7 @@ public class pick_up : MonoBehaviour {
         o.layer = LayerMask.NameToLayer("picked_up");
         StartCoroutine(rotaty_rotaty(o));
         float dist = Vector3.Distance(o.transform.position, target);
-        while (Input.GetKey(KeyCode.Mouse1) && Vector3.Distance(o.transform.position,target) > .25f)
+        while ( Vector3.Distance(o.transform.position,target) > .25f)
         {
             blur_volume.weight = Mathf.Lerp(0,1,1 - Vector3.Distance(o.transform.position, target) / dist);
             cur = Vector3.SmoothDamp(cur, target, ref vel, smoothing);

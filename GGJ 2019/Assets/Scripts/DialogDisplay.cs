@@ -11,6 +11,8 @@ public class DialogDisplay : MonoBehaviour
 {
     [SerializeField]
     private DialogAsset _Dialog;
+    [SerializeField]
+    private bool_var dialogue_on;
 
     [Header("Scene")]
     [SerializeField]
@@ -71,6 +73,7 @@ public class DialogDisplay : MonoBehaviour
         }
 
         _Displaying = true;
+        dialogue_on.val  = true;
         _DisplayText.text = "";
         _Animator.SetBool(_DisplayingHash, true);
         wobbleRanges.Clear();
@@ -154,6 +157,7 @@ public class DialogDisplay : MonoBehaviour
         }
 
         _Displaying = false;
+        dialogue_on.val  = false;
         _Animator.SetBool(_DisplayingHash, false);
         wobbleRanges.Clear();
     }
