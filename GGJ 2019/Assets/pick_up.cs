@@ -43,7 +43,7 @@ public class pick_up : MonoBehaviour {
         bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, grab_distance, 1 << LayerMask.NameToLayer("pickupable"));
         bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, grab_distance, 1 << LayerMask.NameToLayer("interactable"));
 
-        bool click = Input.GetMouseButtonDown(1) && stun_lock == 0;
+        bool click = Input.GetMouseButtonDown(0) && stun_lock == 0;
 
         if (hover_pickupable)
         {
