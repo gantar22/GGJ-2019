@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
 public class pickupable : MonoBehaviour
 {
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioClip letGoSound;
     protected bool firstPickup = true;
+
+    [SerializeField] private bool shouldOutlineOnHover = true;
+
+    private Outline outline;
 
     public void OnPickupEvent()
     {
@@ -21,6 +26,18 @@ public class pickupable : MonoBehaviour
         OnLetGo();
     }
 
+    private bool hovered = false; // hack, i'm sorry
+    public void OnHover()
+    {
+        hovered = true;
+        if (shouldOutlineOnHover)
+        {
+            if (!outline)
+                outline = gameObject.AddComponent<Outline>();
+            outline.enabled = true;
+        }
+    }
+
     protected virtual void OnPickup()
     {
 
@@ -29,6 +46,13 @@ public class pickupable : MonoBehaviour
     protected virtual void OnLetGo()
     {
 
+    }
+
+    private void LateUpdate()
+    {
+        if (!hovered && outline)
+            outline.enabled = false;
+        hovered = false;
     }
 
 }

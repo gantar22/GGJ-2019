@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using cakeslice;
 
 
 /*
@@ -28,36 +29,31 @@ public class pick_up : MonoBehaviour {
     [SerializeField]
     float smoothing;
 
-
-    // Use this for initialization
-    void Start () {
+    private void Start () {
         cam = Camera.main;
-	}
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetMouseButtonDown(1) && stun_lock == 0)
+	private void Update () {
+        RaycastHit hit1, hit2;
+        bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, Mathf.Infinity, 1 << LayerMask.NameToLayer("pickupable"));
+        bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, Mathf.Infinity, 1 << LayerMask.NameToLayer("interactable"));
+
+        bool click = Input.GetMouseButtonDown(1) && stun_lock == 0;
+
+        if (hover_pickupable)
         {
-            RaycastHit hit = new RaycastHit();
-            bool b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("pickupable"));
-
-            if (b)
+            pickupable p = hit1.collider.GetComponent<pickupable>();
+            p.OnHover();
+            if (click)
             {
-                //to_pick_up.val = hit.collider.gameObject;
-                pickupable p = hit.collider.GetComponent<pickupable>();
-                if(p)
-                {
+                if (p)
                     p.OnPickupEvent();
-                }
-                StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit.collider.gameObject));
-            }
-            b = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("interactable"));
-
-            if (b)
-            {
-                hit.collider.gameObject.GetComponent<Interactable>().act();
+                StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit1.collider.gameObject));
             }
         }
+
+        if(click && hover_interactable)
+            hit2.collider.gameObject.GetComponent<Interactable>().act();
 	}
 
 
