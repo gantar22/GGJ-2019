@@ -21,7 +21,7 @@ MonoBehaviour:
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}
-  - EntryText: She does like being in pictures.
+  - EntryText: She doesn't like being in pictures.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 11400000, guid: d645e0daba451422cb89e325691443f0, type: 2}

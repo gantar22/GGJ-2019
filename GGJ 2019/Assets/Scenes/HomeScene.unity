@@ -338,7 +338,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63628
+  m_Name: pb_Mesh35292
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -11885,7 +11885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1273330084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13729,11 +13729,13 @@ MonoBehaviour:
   to_enable:
     m_keys:
     - {fileID: 2004944858}
-    m_values: 01000000
+    - {fileID: 1273330082}
+    m_values: 0100000000000000
   to_disable:
     m_keys:
     - {fileID: 1273329808}
-    m_values: 01000000
+    - {fileID: 1273330082}
+    m_values: 0100000002000000
 --- !u!1001 &4499063522817342039
 PrefabInstance:
   m_ObjectHideFlags: 0
