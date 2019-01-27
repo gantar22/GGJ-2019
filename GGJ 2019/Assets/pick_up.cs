@@ -60,7 +60,7 @@ public class pick_up : MonoBehaviour {
             {
                 if (p)
                     p.OnPickupEvent();
-                StartCoroutine(go(Camera.main.transform.forward * 2 + Camera.main.transform.position, hit1.collider.gameObject));
+                StartCoroutine(go(Camera.main.transform.forward * 1.6f + Camera.main.transform.position, hit1.collider.gameObject));
             }
         }
 
