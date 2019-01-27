@@ -129,7 +129,7 @@ public class pick_up : MonoBehaviour {
             if (o.GetComponent<walkman>())
             {
                 o.GetComponent<walkman>().tune(Input.GetAxis("Mouse X") * Time.deltaTime);
-                o.transform.rotation = Quaternion.Lerp(o.transform.rotation, transform.rotation * Quaternion.Euler(0, 90, 35), Time.deltaTime * 3);
+                o.transform.rotation = Quaternion.Lerp(o.transform.rotation, transform.rotation * Quaternion.Euler(0, -90, -35), Time.deltaTime * 3);
             }
             else
                 o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0) * Time.deltaTime * rotate_speed);
