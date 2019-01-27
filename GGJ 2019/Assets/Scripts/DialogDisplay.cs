@@ -62,7 +62,7 @@ public class DialogDisplay : MonoBehaviour
     [ContextMenu("Display (Test)")]
     public void Display(int i)
     {
-        if (!Application.isPlaying)
+        if (!Application.isPlaying || i < 0 || i >= _Dialog.Count)
             return;
 
         StartCoroutine(DisplayCR(i));

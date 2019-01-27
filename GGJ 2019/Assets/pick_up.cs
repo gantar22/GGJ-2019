@@ -116,9 +116,12 @@ public class pick_up : MonoBehaviour {
 
     IEnumerator rotaty_rotaty(GameObject o)
     {
-        while(stun_lock == 1)
+        while(stun_lock > 0)
         {
-            o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"),0) * Time.deltaTime * rotate_speed);
+            if (o.GetComponent<walkman>())
+                o.GetComponent<walkman>().tune(Input.GetAxis("Mouse X") * Time.deltaTime);
+            else
+                o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0) * Time.deltaTime * rotate_speed);
             yield return null;
         }
 

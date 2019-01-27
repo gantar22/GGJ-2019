@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
 public class Interactable : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class Interactable : MonoBehaviour
        if(interactSound) AudioSource.PlayClipAtPoint(interactSound, transform.position);
        act();
        firstInteract = false;
+        
     }
+
 
     public virtual void act()
     {
