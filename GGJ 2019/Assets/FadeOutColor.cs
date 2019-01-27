@@ -15,6 +15,11 @@ public class FadeOutColor : MonoBehaviour
     void Start()
     {
         currentFadeOutTime = fadeOutTime;
+        Graphic[] images = GetComponents<Graphic>();
+        foreach (Graphic i in images)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, 1.0f);
+        }
     }
 
     // Update is called once per frame
