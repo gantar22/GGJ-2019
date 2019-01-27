@@ -18,5 +18,6 @@ public class photograph : pickupable
     protected override void OnLetGo()
     {
         GetComponent<Renderer>().enabled = false;
+        shouldOutlineOnHover = false;
     }
 }

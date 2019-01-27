@@ -82,7 +82,7 @@ public class DialogDisplay : MonoBehaviour
         _Animator.SetBool(_DisplayingHash, true);
         wobbleRanges.Clear();
         yield return new WaitForSeconds(_StartTextCrawlDelay);
-
+        print($"Tried to dialogue {i} and dialogue has {_Dialog.Count} size");
         for (int x = 0; x < _Dialog[i].DialogEntries.Length; x++)
         {
             _DisplayText.text = "";
@@ -136,12 +136,12 @@ public class DialogDisplay : MonoBehaviour
 
             bool hasStoppedHolding = false; // so that you need to let go of mouse before speeding up text
 
-            for (i = 0; i < entryText.Length; ++i)
+            for (int  j = 0; j < entryText.Length; ++j)
             {
                 var hold = Input.GetButton(_AdvanceDialogButton);
                 hasStoppedHolding = hasStoppedHolding || !hold;
 
-                char c = entryText[i];
+                char c = entryText[j];
                 _DisplayText.text += c;
                 _CurrentCharacter++;
 

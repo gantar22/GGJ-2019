@@ -13,7 +13,7 @@ public class pickupable : MonoBehaviour
     [SerializeField] private AudioClip letGoSound;
     protected bool firstPickup = true;
 
-    [SerializeField] private bool shouldOutlineOnHover = true;
+    [SerializeField] public bool shouldOutlineOnHover = true;
 
     private Outline outline;
 

@@ -66,7 +66,7 @@ public class pick_up : MonoBehaviour {
     {
         Vector3 start = o.transform.position;
         Vector3 cur = o.transform.position;
-        Quaternion init_rot = transform.rotation;
+        Quaternion init_rot = o.transform.rotation;
         //float total_height = target.y - o.transform.position.y;
         vel = Vector3.zero;
         stun_lock.val++;
@@ -111,7 +111,7 @@ public class pick_up : MonoBehaviour {
     {
         while(stun_lock == 1)
         {
-            o.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"),-Input.GetAxis("Mouse X"),0) * Time.deltaTime * rotate_speed);
+            o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"),0) * Time.deltaTime * rotate_speed);
             yield return null;
         }
 

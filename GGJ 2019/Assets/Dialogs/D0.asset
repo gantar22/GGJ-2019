@@ -16,4 +16,4 @@ MonoBehaviour:
   - EntryText: It still doesn't feel like she's dead.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
-    ExecuteOnExit: {fileID: 0}
+    ExecuteOnExit: {fileID: 11400000, guid: 372439af15c0183459f3978e8cf01238, type: 2}
