@@ -2,13 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
-{
-    public virtual void act()
-    {
-
-    }
-}
 
 public class open : Interactable
 {
