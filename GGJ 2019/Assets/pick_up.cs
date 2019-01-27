@@ -40,8 +40,15 @@ public class pick_up : MonoBehaviour {
 	
 	private void Update () {
         RaycastHit hit1, hit2;
-        bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, grab_distance, 1 << LayerMask.NameToLayer("pickupable"));
-        bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, grab_distance, 1 << LayerMask.NameToLayer("interactable"));
+        int clickable_layer = (1 << LayerMask.NameToLayer("interactable")) | (1 << LayerMask.NameToLayer("pickupable"));
+        bool hover_pickupable   = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit1, grab_distance,clickable_layer);
+        bool hover_interactable = Physics.Raycast(cam.transform.position, cam.transform.forward, out hit2, grab_distance, clickable_layer);
+
+        if(hit1.collider)
+            hover_pickupable = hit1.collider.gameObject.layer == LayerMask.NameToLayer("pickupable");
+        if(hit2.collider)
+            hover_interactable = hit2.collider.gameObject.layer == LayerMask.NameToLayer("interactable");
+        if (hit1.collider) print(hit1.collider.gameObject);
 
         bool click = Input.GetMouseButtonDown(0) && stun_lock == 0;
 
@@ -58,7 +65,7 @@ public class pick_up : MonoBehaviour {
         }
 
         if(click && hover_interactable)
-            hit2.collider.gameObject.GetComponent<Interactable>().act();
+            hit2.collider.gameObject.GetComponentInParent<Interactable>().act();
 	}
 
 

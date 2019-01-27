@@ -11,10 +11,14 @@ public class intro_event : MonoBehaviour
 
 ;
     [SerializeField]
+    int_var stun;
+    [SerializeField]
     event_object end;
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        stun.val = 1;
         start.Invoke();
         Invoke("go", 1);
         end.addListener(() =>
@@ -27,6 +31,7 @@ public class intro_event : MonoBehaviour
     void sl()
     {
         init_d.Invoke(1);
+        stun.val = 0;
     }
 
     void go()
