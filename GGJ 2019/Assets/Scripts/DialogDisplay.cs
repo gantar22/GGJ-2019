@@ -10,7 +10,11 @@ using TMPro;
 public class DialogDisplay : MonoBehaviour
 {
     [SerializeField]
-    private DialogAsset _Dialog;
+    private List<DialogAsset> _Dialog;
+
+    [SerializeField]
+    int_event_object play_index;
+
 
     [Header("Scene")]
     [SerializeField]
@@ -48,21 +52,21 @@ public class DialogDisplay : MonoBehaviour
 
     private readonly Regex _WobbleRegex = new Regex(@"(\[wobble\]).*?(\[\/wobble\])", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-    public void SetDialog(DialogAsset d)
+    public void SetDialog(List<DialogAsset> d)
     {
         _Dialog = d;
     }
 
     [ContextMenu("Display (Test)")]
-    public void Display()
+    public void Display(int i)
     {
         if (!Application.isPlaying)
             return;
 
-        StartCoroutine(DisplayCR());
+        StartCoroutine(DisplayCR(i));
     }
 
-    private IEnumerator DisplayCR()
+    private IEnumerator DisplayCR(int i)
     {
         if(_Displaying)
         {
@@ -76,12 +80,12 @@ public class DialogDisplay : MonoBehaviour
         wobbleRanges.Clear();
         yield return new WaitForSeconds(_StartTextCrawlDelay);
 
-        for (int x = 0; x < _Dialog.DialogEntries.Length; x++)
+        for (int x = 0; x < _Dialog[i].DialogEntries.Length; x++)
         {
             _DisplayText.text = "";
             _CurrentCharacter = 0;
             wobbleRanges.Clear();
-            var entry = _Dialog.DialogEntries[x];
+            var entry = _Dialog[i].DialogEntries[x];
 
             if(entry.ExecuteOnEnter)
                 entry.ExecuteOnEnter.Invoke();
@@ -129,7 +133,7 @@ public class DialogDisplay : MonoBehaviour
 
             bool hasStoppedHolding = false; // so that you need to let go of mouse before speeding up text
 
-            for (int i = 0; i < entryText.Length; ++i)
+            for (i = 0; i < entryText.Length; ++i)
             {
                 var hold = Input.GetButton(_AdvanceDialogButton);
                 hasStoppedHolding = hasStoppedHolding || !hold;
@@ -200,6 +204,8 @@ public class DialogDisplay : MonoBehaviour
         _Animator = GetComponent<Animator>();
 
         _ButtonPressWait = new WaitUntil(() => Input.GetButtonDown(_AdvanceDialogButton));
+
+        play_index.e.AddListener(Display);
 
         _TestEvent.addListener(() => Debug.Log("Just finished!"));
     }
