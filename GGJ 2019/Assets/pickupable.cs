@@ -19,6 +19,7 @@ public class pickupable : MonoBehaviour
 
     public void OnPickupEvent()
     {
+        if(play_dialogue)
         play_dialogue.Invoke(id);
         if(pickupSound) AudioSource.PlayClipAtPoint(pickupSound, transform.position);
        OnPickup();
