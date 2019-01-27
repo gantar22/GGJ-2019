@@ -104,4 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0fa57044973704f8d9e3f5b10b9eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: aac0c47a5acc7ea42b536c66423b976c, type: 3}
+  letGoSound: {fileID: 8300000, guid: be0135f8aa7ef6149998f6e6b73ba1c3, type: 3}
   creepiness: {fileID: 11400000, guid: c39be50bdc55abc4c85188f4175fc435, type: 2}
