@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: D4
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: He was good for her.
+  - EntryText: null
     TextSpeed: 0
-    ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
-    ExecuteOnExit: {fileID: 0}
-  - EntryText: He was good for us.
-    TextSpeed: 1.23
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}

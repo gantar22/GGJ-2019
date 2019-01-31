@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: D3
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: I could have visited more.
+  - EntryText: I could use a drink
     TextSpeed: 0
-    ExecuteOnEnter: {fileID: 0}
-    ExecuteOnExit: {fileID: 0}
-  - EntryText: She would have liked that.
-    TextSpeed: 1.85
     ExecuteOnEnter: {fileID: 0}
     ExecuteOnExit: {fileID: 0}

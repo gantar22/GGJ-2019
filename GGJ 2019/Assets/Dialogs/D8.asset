@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D8
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: That's disapointing
+  - EntryText: That's disappointing
     TextSpeed: 1.1
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}

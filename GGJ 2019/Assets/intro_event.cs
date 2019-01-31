@@ -30,7 +30,7 @@ public class intro_event : MonoBehaviour
 
     void sl()
     {
-        init_d.Invoke(1);
+       // init_d.Invoke(1);
         stun.val = 0;
     }
 

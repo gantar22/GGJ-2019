@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: D5
   m_EditorClassIdentifier: 
   DialogEntries:
-  - EntryText: I wonder how Dad will take it.
+  - EntryText: I wonder if Dad will be at the funeral.
     TextSpeed: 0
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}
   - EntryText: '...'
-    TextSpeed: 1.23
+    TextSpeed: 0
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}
-  - EntryText: I think he'll be fine.
-    TextSpeed: 1.23
+  - EntryText: I hope so.
+    TextSpeed: 0
     ExecuteOnEnter: {fileID: 11400000, guid: d479907769cd3d04282a22fce546fd39, type: 2}
     ExecuteOnExit: {fileID: 0}
