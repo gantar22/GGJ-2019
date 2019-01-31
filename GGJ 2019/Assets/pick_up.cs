@@ -53,9 +53,11 @@ public class pick_up : MonoBehaviour {
         bool click = Input.GetMouseButtonDown(0) && stun_lock == 0;
         if (hover_pickupable)
         {
-            print("ASDFADSf");
             pickupable p = hit1.collider.GetComponent<pickupable>();
-            p.OnHover();
+            if (p)
+            { 
+                p.OnHover();
+            }
             if (click)
             {
                 if (p)
@@ -64,8 +66,15 @@ public class pick_up : MonoBehaviour {
             }
         }
 
-        if(click && hover_interactable)
-            hit2.collider.gameObject.GetComponentInParent<Interactable>().act();
+        if (hover_interactable)
+        {
+            Interactable p = hit1.collider.GetComponent<Interactable>();
+            if (p)
+            {
+                p.OnHover();
+            }
+            if(click) hit2.collider.gameObject.GetComponentInParent<Interactable>().act();
+        }
 	}
 
 
@@ -132,7 +141,7 @@ public class pick_up : MonoBehaviour {
                 o.transform.rotation = Quaternion.Lerp(o.transform.rotation, transform.rotation * Quaternion.Euler(0, -90, -35), Time.deltaTime * 3);
             }
             else
-                o.transform.Rotate(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0) * Time.deltaTime * rotate_speed);
+                o.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * Time.deltaTime * rotate_speed);
             yield return null;
         }
 
